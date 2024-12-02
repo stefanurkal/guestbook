@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guestbook submissions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+
+<body>
+<h1> current entries</h1>
+<% if (guests.length !== 0) { %>
+    <ul>
+    <% for (let i=0; i < guests.length; i++ ) { %>
+            <li> Guest Book post: <%= guests[i].id %>  </li>
+            <li>Name: <%=guests[i].firstName %> <%= guests[i].lastName %> </li>
+            <li> Job: <%=guests[i].jobTitle %></li>
+            <li> Company: <%= guests[i].company %></li>
+            <li> link: <%= guests[i].link %></li>
+            <li> email: <%= guests[i].email %></li>
+            <li> how we met:<%= guests[i].meet %></li>
+            <% if (guests[i].meet === "other") { %>
+              <li> <%= guests[i].other %></li>
+            <% } %>
+            <li> Message: <%= guests[i].message %></li>
+            <li> Join mailing list: <%= guests[i].mailing %></li>
+            <li> e-mail format: <%= guests[i].method %></li>
+            <li> Submission time: <%= guests[i].timestamp %></li>
+            <br>
+            <% } %>
+        </ul>
+    
+    <% } else { %> 
+        <p>no entrees</p>
+    <% } %> 
+
+</body>
+</html>

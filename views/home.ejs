@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/home.css">  
+    <title>Guestbook</title>
+
+    <!-- Favicon -->
+     <link rel="icon" type="image/png"
+           href="images/faviacon.png">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Form</h1>
+        </header>
+
+        <form id="guest-book" method="post" action="/success">
+
+        <div class="userInput">
+            <div><label for="fname">First Name
+                <span id="err-fname" class ="err">
+                    First name required.
+                </span>
+            </label>
+            <input type="text" id="fname" name="fname" placeholder="Enter first name"></div>
+            <div><label for="lname">Last Name
+
+            </label>
+              <input type="text" id="lname" name="lname" placeholder="Enter Last name"></div>
+            <div><label for="job">Job Title</label>
+              <input type="text" id="job" name="job" placeholder="Enter your job title"></div>
+        
+        </div>
+        <div class="userInput">
+            <div><label for="company">Company</label>
+              <input type="text" id="company" name ="company" placeholder="Enter company name"></div>
+            <div><label for="linked">LinkedIn URL</label>
+              <input type="text" id="link" name="link" placeholder="Enter URL"></div>
+            <div><label for="email">E-mail Address
+                <span id="err-email" class ="err">
+                    Please enter a valid e-mail name
+                </span>
+            </label>
+              <input type="email" id="email" name="email" placeholder="Enter your e-mail"></div>
+         </div>
+        <div class="dropDown">
+            <div><label for="meet"> How did we meet?:
+                <span id="err-meet" class ="err">
+                    selection required
+                </span>
+            </label>
+            <select id="meet" name="meet">
+                <option value='none'>-- Select --</option>
+                <option value='school'>School</option>
+                <option value='work'>Work</option>
+                <option value='gaming'>Online Gaming</option>
+                <option value='friend'>Through a friend</option>
+                <option value='other'> other</option>
+            </select></div>
+            <div id="ifOther"><label for="sother">If Other, please specify </label>
+                <input type="text" id="sother" name="sother"></div>
+        </div>  
+        <div class="note">
+            <div><label for="message">Message</label>
+              <input type="text" id="message" name= "message" placeholder="Would you like to leave a brief message?"></div>
+        </div>
+        <div><label>
+            <input type="checkbox" id="join" name = "join" value ="join"> 
+            Would you like to join my mailing list?
+        </label>
+        </div>
+        <div>
+            <label>Choose e-mail format:</label>
+            <label for="html">
+                <input type="radio" id="html" 
+                    name="method" value="html">Html
+            </label>
+            <label for="text">
+                <input type="radio" id="text" 
+                    name="method" value="text">Text
+            </label>
+        </div>
+        <div>
+            <button type="submit" class="main-button">Submit</button>
+        </div>
+
+        </form>
+
+    </div>
+
+
+
+</body>
+</html>
